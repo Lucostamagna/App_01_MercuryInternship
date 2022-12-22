@@ -1,31 +1,26 @@
-import React from 'react'
-import { View, Text } from 'react-native';
-import { TouchableOpacity } from 'react-native-gesture-handler';
-import { RootStackParams } from '../navigator/StackNavigator';
-import { StackScreenProps } from '@react-navigation/stack';
-import { styles } from '../theme/appTheme'
-import Data from '../Data.json'
-
-
+import React from 'react';
+import {View} from 'react-native';
+import Data from '../Data.json';
+import {TransactionInfo} from '../components/TransactionInfo';
 
 const Transactions = () => {
-  const { transactions } = Data
+  const {transactions} = Data;
   return (
     <View>
-        <Text style={styles.title}> Transactions</Text>
-    
-     <TouchableOpacity
-
-     >
-
-
-
-     </TouchableOpacity>
-    
-    
-    
+      {transactions.map((data, index) => {
+        return (
+          <TransactionInfo
+            key={index}
+            type={data.type}
+            amount={data.amount}
+            account={data.account}
+            fromAccount={data.fromAccount}
+            toAccount={data.toAccount}
+          />
+        );
+      })}
     </View>
-  )
-}
+  );
+};
 
 export default Transactions;

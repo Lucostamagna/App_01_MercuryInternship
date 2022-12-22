@@ -1,30 +1,33 @@
-import { Text } from 'react-native';
-import { Colors } from 'react-native/Libraries/NewAppScreen';
-
-
+import {Text, StyleSheet} from 'react-native';
 
 type accountProps = {
-    account: string;
+  account: string;
 };
 
-export function Account({ account }: accountProps) {
-    return (
-         <Text
-         style={
-            account === 'Checking'
-                 ? {
-                        
-                        color: '#3d8ed4',
-                   }
-                 : account === 'Savings'
-                 ? {
-                        
-                        color: '#3dd456',
-                   }
-                 : Colors 
-       }
-         >
-              {account}
-         </Text>
-    );
+export function Account({account}: accountProps) {
+  return (
+    <Text
+      style={
+        account === 'Checking'
+          ? {
+              ...styles.text,
+              color: '#D50000',
+            }
+          : account === 'Savings'
+          ? {
+              ...styles.text,
+              color: '#C6FF00',
+            }
+          : styles.text
+      }>
+      {account}
+    </Text>
+  );
 }
+
+const styles = StyleSheet.create({
+  text: {
+    paddingTop: 10,
+    fontSize: 16,
+  },
+});

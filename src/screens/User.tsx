@@ -1,11 +1,9 @@
 import { StackScreenProps } from '@react-navigation/stack';
 import React, { useEffect } from 'react'
 import Data from '../Data.json'
-import { Button,View, Text } from 'react-native';
+import {View, Text, BackHandler } from 'react-native';
 import { RootStackParams } from '../navigator/StackNavigator';
 import { styles } from '../theme/appTheme'
-import { TouchableOpacity } from 'react-native-gesture-handler';
-import { Account } from '../components/Account';
 import { AccountsInfo } from '../components/AccountInfo';
 
 type userProps = {
@@ -33,13 +31,22 @@ const User = ({ route, navigation }: Props) => {
 
   return (
     <View style={styles.globalMargin}>
-      <Text style={styles.title}>
-       {name} {email} 
+      <Text style={{
+        color:'black',
+        backgroundColor:'#ECEFF1',
+        fontSize: 20,
+        marginBottom:15
+
+        
+      }}>
+       {name};       {email} 
       </Text>
       <AccountsInfo accounts={accounts} />
+      
       
     </View>
   );
 }
+
 
 export default User;

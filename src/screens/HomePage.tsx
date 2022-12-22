@@ -1,60 +1,43 @@
-import React, { useEffect } from 'react'
-import StackNavigator from '../navigator/StackNavigator'
-import { Button, Text, View, TouchableOpacity } from 'react-native'
+import React from 'react'
+import {  Text, View, TouchableOpacity } from 'react-native'
 import { StackScreenProps } from '@react-navigation/stack';
 import { styles } from '../theme/appTheme';
 
 
-interface Props extends StackScreenProps<any, any>{};
+interface Props extends StackScreenProps<any, any> {}
 
-const HomePage = ({navigation}: Props ) => {
+const HomePage = ({navigation}: Props) => {
   return (
-    <View >
-      <Text> pagina pricipal</Text>
     <View>
-    <TouchableOpacity
-    style={styles.botonUser}
-     onPress={ ()=> navigation.navigate('User', {
-      name:'John Doe',
-      email:'johndoe@gmail.com'
-     })}
-    >
-      <Text>John Doe</Text>
-    </TouchableOpacity>
-    <TouchableOpacity
-    style={styles.botonUser}
-    onPress={ ()=> navigation.navigate('Transaction', {
-      
-     })}
-    >
-      
-      <Text>Transaction</Text>
-    </TouchableOpacity>
-    <TouchableOpacity
-    style={styles.botonUser}
-
-    onPress={ ()=> navigation.navigate('Friends', {
-      
- })}
-     
-    >
-      <Text>Friends</Text>
-
-    </TouchableOpacity>
-
-
+      <Text style={{
+        color:'#546E7A',
+        fontSize: 20,
+      }}> ...Welcome User!</Text>
+      <View>
+        <TouchableOpacity
+          style={styles.botonUser}
+          onPress={() =>
+            navigation.navigate('User', {
+              name: 'John Doe',
+              email: 'johndoe@gmail.com',
+            })
+          }>
+          <Text style={styles.text}>John Doe</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.botonUser}
+          onPress={() => navigation.navigate('Transactions', {})}>
+          <Text style={styles.text}>Transaction</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.botonUser}
+          onPress={() => navigation.navigate('Friends', {})}>
+          <Text style={styles.text}>Friends</Text>
+        </TouchableOpacity>
+      </View>
     </View>
-    
-
-
- 
-
-
-
-
-    </View>
-  )
-}
+  );
+};
 
 export default HomePage
 
