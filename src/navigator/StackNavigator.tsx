@@ -10,10 +10,21 @@ const Stack = createStackNavigator();
 
 const StackNavigator =()=> {
   return (
-    <Stack.Navigator>
-      <Stack.Screen name="User" component={User} />
-      <Stack.Screen name="Transactions" component={Transactions} />
-      <Stack.Screen name="Friends" component={Friends} />
+    <Stack.Navigator
+     screenOptions={{
+      headerStyle:{
+        elevation:0,
+        shadowColor:'transparent'
+      },
+      cardStyle:{
+        backgroundColor:'white'
+      }
+     }}
+     
+    >
+      <Stack.Screen name="User" options={{ title:"User"}}   component={User} />
+      <Stack.Screen name="Transactions"options={{ title:"Transactions"}}  component={Transactions} />
+      <Stack.Screen name="Friends" options={{ title:"Friends"}} component={Friends} />
     </Stack.Navigator>
   );
 }

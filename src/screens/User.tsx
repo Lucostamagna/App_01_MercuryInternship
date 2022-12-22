@@ -1,10 +1,21 @@
+import { StackScreenProps } from '@react-navigation/stack';
 import React from 'react'
-import { View, Text } from 'react-native';
+import { Button,View, Text } from 'react-native';
+import { styles } from '../theme/appTheme'
 
-const User = () => {
+
+
+
+interface Props extends StackScreenProps<any, any>{};
+const User = ({navigation}: Props) => {
   return (
-    <View>
-        <Text> User</Text>
+    <View style={styles.globalMargin}>
+        <Text style={styles.title}> User</Text>
+
+        <Button
+         title="donde ir?"
+         onPress={()=> navigation.navigate('Transactions')}
+        />
     </View>
   )
 }
