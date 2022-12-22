@@ -4,7 +4,16 @@ import { createStackNavigator } from '@react-navigation/stack';
 import User from '../screens/User';
 import Transactions from '../screens/Transactions';
 import Friends from '../screens/Friends';
+import HomePage from '../screens/HomePage';
 
+
+// export type RootStackParams={
+  
+//   HomePage:undefined,
+//   User:{ name: string, email: string }
+//   Transaction: undefined,
+//   Friends:undefined,
+// }
 
 const Stack = createStackNavigator();
 
@@ -22,9 +31,9 @@ const StackNavigator =()=> {
      }}
      
     >
-      <Stack.Screen name="User" options={{ title:"User"}}   component={User} />
-      <Stack.Screen name="Transactions"options={{ title:"Transactions"}}  component={Transactions} />
-      <Stack.Screen name="Friends" options={{ title:"Friends"}} component={Friends} />
+      <Stack.Screen name="HomePage" options={{ title:"HomePage"}}  component={HomePage} />
+      <Stack.Screen name="User"   component={User} />
+      <Stack.Screen name="Transactions"options={{ title:"Transactions"}}  component={Transactions} /> 
     </Stack.Navigator>
   );
 }
