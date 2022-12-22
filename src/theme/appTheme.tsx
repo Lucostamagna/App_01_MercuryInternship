@@ -8,6 +8,14 @@ export const styles =StyleSheet.create({
         fontSize:30,
         color:'blue',
         marginBottom:10
-    }
+    },
+    botonUser:{
+        width:50,
+        height:50,
+        color:'black',
+        backgroundColor:'red', 
+        justifyContent:'center'
+       
+    },
 
 });
