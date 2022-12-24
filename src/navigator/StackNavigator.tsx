@@ -1,12 +1,12 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
-import User from '../screens/User';
-import Transactions from '../screens/Transactions';
-import Friends from '../screens/Friends';
-import HomePage from '../screens/HomePage';
+import User from '../screens/ProfileScrenn';
+import Transactions from '../screens/TransactionsScreen';
+import Friends from '../screens/FriendsScreen';
+import MyAccount from '../screens/MyAccountScreen';
 
 export type RootStackParams = {
-  HomePage: undefined;
+  MyAccount: undefined;
   User: {name: string; email: string};
   Friends: {name: string; email: string};
   Transactions: {
@@ -21,21 +21,11 @@ const Stack = createStackNavigator<RootStackParams>();
 
 const StackNavigator = () => {
   return (
-    <Stack.Navigator
-      screenOptions={{
-        headerStyle: {
-          elevation: 0,
-          shadowColor: 'transparent',
-        },
-        cardStyle: {
-          backgroundColor: 'white',
-        },
-      
-      }}>
+    <Stack.Navigator>
       <Stack.Screen
-        name="HomePage"
-        options={{title: 'HomePage'}}
-        component={HomePage}
+        name="MyAccount"
+        options={{title: 'MyAccount'}}
+        component={MyAccount}
       />
       <Stack.Screen name="User" options={{title: 'User'}} component={User} />
       <Stack.Screen
