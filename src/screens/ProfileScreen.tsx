@@ -4,7 +4,7 @@ import Data from '../Data.json'
 import {View, Text, BackHandler } from 'react-native';
 import { RootStackParams } from '../navigator/StackNavigator';
 import { styles } from '../theme/appTheme'
-import { AccountsInfo } from '../components/AccountInfo';
+import { AccountsInfo } from '../components/Account_Info';
 
 type userProps = {
   name: string;

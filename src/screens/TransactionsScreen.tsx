@@ -1,7 +1,7 @@
 import React from 'react';
 import {View} from 'react-native';
 import Data from '../Data.json';
-import {TransactionInfo} from '../components/TransactionInfo';
+import TransactionInfo from '../components/Transaction_Info';
 
 const Transactions = () => {
   const {transactions} = Data;

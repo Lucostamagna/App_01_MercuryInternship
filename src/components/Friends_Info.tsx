@@ -1,14 +1,14 @@
-import { View, Text, StyleSheet } from 'react-native';
+import {View, Text, StyleSheet} from 'react-native';
 
 type friendProps = {
   name: string;
   email: string;
 };
 
-export function FriendsInfo({name, email}: friendProps) {
+const FriendsInfo = ({name, email}: friendProps) => {
   return (
     <View key={email} style={styles.container}>
-      <Text  style={styles.name}> {name} </Text>
+      <Text style={styles.name}> {name} </Text>
       <Text style={styles.email}> {email} </Text>
     </View>
   );
@@ -43,3 +43,5 @@ const styles = StyleSheet.create({
     color: '#FCE4EC',
   },
 });
+
+export default FriendsInfo;

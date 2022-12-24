@@ -4,25 +4,10 @@ type accountProps = {
   account: string;
 };
 
-export function Account({account}: accountProps) {
-  return (
-    <Text
-      style={
-        account === 'Checking'
-          ? {
-              ...styles.text,
-              color: '#D50000',
-            }
-          : account === 'Savings'
-          ? {
-              ...styles.text,
-              color: '#C6FF00',
-            }
-          : styles.text
-      }>
-      {account}
-    </Text>
-  );
+const Account = ({account}: accountProps)=> {
+  return <Text
+   style={{color: 'black'}}>
+  {account}</Text>;
 }
 
 const styles = StyleSheet.create({
@@ -31,3 +16,5 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
 });
+
+export default Account;

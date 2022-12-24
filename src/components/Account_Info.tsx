@@ -1,5 +1,5 @@
 import {View, Text, StyleSheet} from 'react-native';
-import {Account} from './Account';
+import Account from './Account';
 
 type accountsProps = {
   accounts: {

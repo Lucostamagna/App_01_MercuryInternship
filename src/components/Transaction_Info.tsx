@@ -1,5 +1,5 @@
 import {View, Text, StyleSheet} from 'react-native';
-import {Account} from './Account';
+import Account from './Account';
 
 type transactionProps = {
   type: string;
@@ -8,13 +8,14 @@ type transactionProps = {
   fromAccount?: string;
   toAccount?: string;
 };
-export function TransactionInfo({
+
+const TransactionInfo =({
   type,
   amount,
   account,
   fromAccount,
   toAccount,
-}: transactionProps) {
+}: transactionProps) =>{
   return (
     <View style={styles.transactions_container}>
       <View>
@@ -58,3 +59,6 @@ const styles = StyleSheet.create({
     fontSize: 15,
   },
 });
+
+
+export default TransactionInfo;

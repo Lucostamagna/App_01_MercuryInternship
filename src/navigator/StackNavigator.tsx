@@ -1,6 +1,6 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
-import User from '../screens/ProfileScrenn';
+import User from '../screens/ProfileScreen';
 import Transactions from '../screens/TransactionsScreen';
 import Friends from '../screens/FriendsScreen';
 import MyAccount from '../screens/MyAccountScreen';
@@ -27,7 +27,11 @@ const StackNavigator = () => {
         options={{title: 'MyAccount'}}
         component={MyAccount}
       />
-      <Stack.Screen name="User" options={{title: 'User'}} component={User} />
+      <Stack.Screen 
+      name="User"
+       options={{title: 'User'}} 
+       component={User}
+        />
       <Stack.Screen
         name="Transactions"
         options={{title: 'Transactions'}}
