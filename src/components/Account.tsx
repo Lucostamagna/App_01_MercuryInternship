@@ -1,4 +1,5 @@
-import {Text, StyleSheet} from 'react-native';
+import {Text,} from 'react-native';
+import {styles} from '../theme/appTheme';
 
 type accountProps = {
   account: string;
@@ -6,15 +7,7 @@ type accountProps = {
 
 const Account = ({account}: accountProps)=> {
   return <Text
-   style={{color: 'black'}}>
-  {account}</Text>;
+  style={styles.TextAccount}> {account}</Text>;
 }
-
-const styles = StyleSheet.create({
-  text: {
-    paddingTop: 10,
-    fontSize: 16,
-  },
-});
 
 export default Account;

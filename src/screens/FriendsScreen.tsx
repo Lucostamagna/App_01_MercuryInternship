@@ -1,7 +1,7 @@
 import React from 'react'
 import { StackScreenProps } from '@react-navigation/stack';
 import { RootStackParams } from '../navigator/StackNavigator';
-import { View, Text } from 'react-native';
+import { View, Image } from 'react-native';
 import { styles } from '../theme/appTheme'
 import Data from '../Data.json'
 import  FriendsInfo  from '../components/Friends_Info'
@@ -14,8 +14,11 @@ const Friends = () => {
     <View>
       {friends.map(data => {
         return (
+          <View>
           <FriendsInfo key={data.email} name={data.name} email={data.email} />
-        );
+       
+          </View>
+          );
       })}
     </View>
   );

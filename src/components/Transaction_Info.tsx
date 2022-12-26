@@ -9,56 +9,47 @@ type transactionProps = {
   toAccount?: string;
 };
 
-const TransactionInfo =({
+const TransactionInfo = ({
   type,
   amount,
   account,
   fromAccount,
   toAccount,
-}: transactionProps) =>{
+}: transactionProps) => {
   return (
-    <View style={styles.transactions_container}>
+    <View style={{backgroundColor:'red'}}>
       <View>
-        <Text style={styles.text}>
-          {type} : ${amount}{' '}
+        <Text>
+          {type} : ${amount}
         </Text>
         {account && (
-          <Text style={styles.text}>
-            {' '}
-            Account: <Account account={account} />{' '}
-          </Text>
+          <Text> Account: <Account account={account} /> </Text>
         )}
-        {fromAccount && (
-          <Text style={styles.text}>
-            {' '}
-            From Account: <Account account={fromAccount} />{' '}
-          </Text>
+        { fromAccount && (
+          <Text> From Account: <Account account={fromAccount} /> </Text>
         )}
         {toAccount && (
-          <Text style={styles.text}>
-            {' '}
-            To Account: <Account account={toAccount} />
-          </Text>
+          <Text> To Account: <Account account={toAccount} /> </Text>
         )}
       </View>
     </View>
   );
-}
-const styles = StyleSheet.create({
-  transactions_container: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    margin: 3,
-    marginBottom: 10,
-    borderRadius: 8,
-    width: '98%',
-    backgroundColor: '#CFD8DC',
-  },
-  text: {
-    color: 'black',
-    fontSize: 15,
-  },
-});
+};
+// const styles = StyleSheet.create({
+//   transactions_container: {
+//     flexDirection: 'row',
+//     alignItems: 'center',
+//     margin: 3,
+//     marginBottom: 10,
+//     borderRadius: 8,
+//     width: '98%',
+//     backgroundColor: '#CFD8DC',
+//   },
+//   text: {
+//     color: 'black',
+//     fontSize: 15,
+//   },
+// });
 
 
 export default TransactionInfo;

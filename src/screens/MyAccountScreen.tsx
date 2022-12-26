@@ -11,20 +11,20 @@ const MyAccount= ({navigation}: Props) => {
       
       <View>
         <TouchableOpacity
-          style={styles.botonUser}
+          style={styles.Touchable}
           onPress={() =>
             navigation.navigate('User', {})}>
-          <Text style={styles.text}>John Doe</Text>
+          <Text style={styles.Text}>John Doe</Text>
         </TouchableOpacity>
         <TouchableOpacity
-          style={styles.botonUser}
+          style={styles.Touchable}
           onPress={() => navigation.navigate('Transactions', {})}>
-          <Text style={styles.text}>Transaction</Text>
+          <Text style={styles.Text}>Transaction</Text>
         </TouchableOpacity>
         <TouchableOpacity
-          style={styles.botonUser}
+          style={styles.Touchable}
           onPress={() => navigation.navigate('Friends', {})}>
-          <Text style={styles.text}>Friends</Text>
+          <Text style={styles.Text}>Friends</Text>
         </TouchableOpacity>
       </View>
    
