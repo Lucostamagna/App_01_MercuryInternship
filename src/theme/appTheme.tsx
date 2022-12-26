@@ -96,14 +96,12 @@ export const styles = StyleSheet.create({
   TextBalance: {
     color: 'black',
     fontSize: 15,
-
     padding: 7,
   },
   FriendsContainer: {
-marginTop:20,
-
-flexDirection: 'row',
-justifyContent: 'space-between',
+    marginTop: 20,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
     width: '100%',
     alignItems: 'center',
     padding: 15,
@@ -116,7 +114,6 @@ justifyContent: 'space-between',
     },
     shadowOpacity: 0.23,
     shadowRadius: 2.62,
-
     elevation: 4,
   },
   FriendsName: {
@@ -130,14 +127,37 @@ justifyContent: 'space-between',
   },
   FriendsEmail: {
     fontSize: 10,
-
     color: 'rgb(99,99,99)',
   },
-  FriendsImage:{
+  FriendsImage: {
     width: 100,
     height: 100,
     marginTop: 15,
     borderRadius: 50,
     backgroundColor: 'red',
-  }
+  },
+  TransactionContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    margin: 2,
+    marginTop: 15,
+    borderRadius: 8,
+    width: '100%',
+    backgroundColor: '#FDEBD0',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.23,
+    elevation: 4,
+  },
+  TransactionText: {
+    padding: 5,
+    fontSize: 15,
+    fontStyle: 'normal',
+    fontWeight: 'bold',
+    color: 'black',
+    marginBottom: 10,
+  },
 });

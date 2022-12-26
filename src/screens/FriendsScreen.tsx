@@ -1,8 +1,7 @@
 import React from 'react'
 import { StackScreenProps } from '@react-navigation/stack';
 import { RootStackParams } from '../navigator/StackNavigator';
-import { View, Image } from 'react-native';
-import { styles } from '../theme/appTheme'
+import { View } from 'react-native';
 import Data from '../Data.json'
 import  FriendsInfo  from '../components/Friends_Info'
 
